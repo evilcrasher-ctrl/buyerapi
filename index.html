@@ -333,8 +333,8 @@ async function sendBug() {
   const resDiv = document.getElementById("result");
   const btn = document.getElementById("sendBtn");
 
-  if (!/^628\d{7,13}$/.test(input)) {
-    resDiv.innerText = "❌ Masukkan nomor WA valid, mulai dari 628...";
+  if (!/^\d+(@s\.whatsapp\.net)?$/.test(input)) {
+    resDiv.innerText = "❌ Masukkan nomor WA valid";
     resDiv.style.color = "crimson";
     return;
   }
